@@ -1,0 +1,40 @@
+.homeContainer{
+    text-align: center;
+}
+.homeContent{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-top:30px;
+}
+.homeButton{
+    width:250px;
+    height:75px;
+    box-shadow: 2px 2px 4px 2px rgb(0, 162, 255);
+    margin:15px;
+    border-radius: 15px;
+    transition: 250ms all ease;
+}
+.homeButton:hover{
+    box-shadow: 2px 2px 10px 2px rgb(0, 132, 255);
+}
+.homeButton:active{
+    box-shadow: 2px 2px 10px 2px rgb(0, 58, 112);
+}
+.homeHeader{
+    margin-top: 100px;
+    font-size:72px;
+    margin-bottom: 20px;
+}
+.homeNotLoggedContent{
+    font-size:28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.homeNotLoggedContentInputBox{
+    width:600px;
+    margin-top:150px;
+}

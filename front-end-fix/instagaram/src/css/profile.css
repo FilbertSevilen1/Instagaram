@@ -1,0 +1,127 @@
+.profileContainer{
+    width:100%;
+    height:90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profileForm{
+    width:80%;
+    height:700px;
+    background: rgb(255,255,255);
+    box-shadow: 2px 2px 4px 2px lightgrey;
+    display: flex;
+}
+.profileLeft{
+    width:450px;
+    height:100%;
+    display: flex;
+    box-sizing: border-box;
+    padding:25px;
+    flex-direction: column;
+    /* background-color: red; */
+    align-items: center;
+}
+.profileLeftMenu{
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+    text-align: justify;
+    padding:25px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profileLeftMenuBranch{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profilePicture{
+    width:325px;
+    height:325px;
+    border-radius: 50%;
+}
+.profileRight{
+    width:900px;
+    height:100%;
+    box-sizing: border-box;
+    padding:50px;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+}
+.profileHeader1{
+    font-size: 48px;
+    margin:0;
+    margin-top:65px;
+    margin-bottom:10px;
+    color:black;
+}
+.profileHeader2{
+    font-size: 24px;
+    margin:0;
+    color:black;
+}
+.profileNotification{
+    width:200px;
+    margin-bottom: 25px;
+    font-size:20px;
+}
+.profileBio{
+    width:700px;
+    height:200px;
+    font-size:22px;
+}
+.profileButton{
+    width:225px;
+    height:60px;
+    margin:10px;
+    background: none;
+    border:none;
+    border: 2px solid grey;
+    border-radius: 25px;
+    font-size:20px;
+    cursor: pointer;
+    transition: 250ms all ease;
+}
+
+.profileButton:hover{
+    border-color: rgb(0, 153, 255);
+}
+.profileButtonSmall{
+    width:110px;
+    height:60px;
+    margin:10px;
+    background: none;
+    border:none;
+    border: 3px solid grey;
+    border-radius: 25px;
+    font-size:16px;
+    cursor: pointer;
+    transition: 250ms all ease;
+}
+.profileButtonSmall:hover{
+    border-color: rgb(0, 153, 255);
+}
+.success{
+    margin-top:25px;
+    border-color:green;
+}
+.success:hover{
+    border-color:rgb(0, 255, 0);
+    background-color: rgb(224, 255, 224);
+}
+.failure{
+    margin-top:25px;
+    border-color:rgb(114, 0, 23)
+}
+.failure:hover{
+    border-color:red;
+    background-color: rgb(255, 166, 166);
+}
+
+.flex{
+    display: flex;
+}
