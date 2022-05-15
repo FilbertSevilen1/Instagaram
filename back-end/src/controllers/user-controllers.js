@@ -114,10 +114,15 @@ module.exports.patchUser = async(req,res) => {
                 found = true;
             }
         }
+        
         if(found){
             return res.status(400).send('Username is already used')
         }
-        // //define query
+        //define query
+        //change username at post
+        const CHANGE_POST_USERNAME = `UPDATE post SET username = ? WHERE username = ?`
+        const [CHANGE_INFO] = await database.execute(CHANGE_POST_USERNAME,[body.username, USER[0].username])
+
         let values = []
         for(let key in body){
             values.push(`${key} = '${body[key]}'`)
