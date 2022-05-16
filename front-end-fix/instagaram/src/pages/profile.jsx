@@ -5,9 +5,11 @@ import '../css/profile.css'
 import '../css/alert.css'
 import Axios from 'axios'
 import FormData from 'form-data'
-import {} from '@chakra-ui/react'
+import { useToast } from '@chakra-ui/react'
 
 function Profile () {
+    const toast = useToast();
+
     const newUsername = useRef();
     const newFullname = useRef();
     const newBio = useRef();
@@ -39,10 +41,24 @@ function Profile () {
         Axios.post("http://localhost:5000/api/users/uploadProfilePicture", data)
         .then((respond)=>{
             console.log(respond.data)
+            toast({
+                title: 'Update Profile Picture Success',
+                description: "Refresh to update",
+                status: 'success',
+                duration: 5000,
+                isClosable: true,
+              })
             setEditProfilePictureState(false)
         })
         .catch((error)=>{
             console.log(error.response.data)
+            toast({
+                title: 'Update Profile Picutre Canceled',
+                description: "",
+                status: 'error',
+                duration: 3000,
+                isClosable: true,
+              })
             setErrorMessage(error.response.data)
         })
     }

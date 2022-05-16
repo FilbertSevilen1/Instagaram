@@ -87,7 +87,7 @@ module.exports.loginUser = async (req,res) =>{
         const [USER] = await database.execute(GET_USER_BY_USERNAME, [body.username])
         console.log(USER)  
         if(!USER.length){
-            return res.status(404).send("User not found")
+            return res.status(404).send("Username or Password is incorrect")
         }
 
         const hashpassword = await bcrypt.compare(body.password, USER[0].password)
